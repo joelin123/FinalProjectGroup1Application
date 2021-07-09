@@ -23,7 +23,7 @@ border-width:3px;
 </head>
 <body bgcolor="#FFD9EC">
 <center>
-<form action="<c:url value='/elena/login'/>" method="post">
+<form action="elena/checklogin.controller" method="post">
 
 <H1 ALIGN="CENTER">Login or Create Account</H1>
 
@@ -31,28 +31,26 @@ border-width:3px;
 
 <div>
 <br>
- Account  :  <INPUT TYPE="TEXT" NAME="userName" required><BR>
+ Account  :  <INPUT TYPE="TEXT" NAME="userName"><BR>
   ${errors.username}
   <br>
   <br>
-  Password :  <INPUT TYPE="password" NAME="userPwd" required><BR>
+  Password :  <INPUT TYPE="password" NAME="userPwd"><BR>
   ${errors.userpwd}
   <BR>
-<a href="<c:url value='/elena/forgetpassword'/>">忘記密碼</a><br>
   <BR>
 <tr><td><input name="login" type="submit" value="登入"/>
-
 <td><input type="reset" value="重置"/><br>
 <br>
-${Failed}
+${errors.msg}
 <BR>
-還沒有帳號嗎?<a href="<c:url value='/elena/registration'/>">請點我註冊</a><br>
-<a href="<c:url value='/googleLogin' />">google登入</a><br>
+<br>
+還沒有帳號嗎?<a href="<c:url value='/elena/registerForm.do'/>">請點我註冊</a><br>
 <br>
 </div>
 <!--  <input name="register" type="submit" value="註冊"/><br> -->
 <br>
-
+<a href="LoginManagerPage.jsp"><input name="IAmManager" type="button" value="我是管理員"/></a>
 <br>
 <br>
 
